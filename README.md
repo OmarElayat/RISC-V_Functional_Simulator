@@ -41,7 +41,7 @@ A recursive non-leaf function implementing Euclid’s algorithm that finds the g
 
 ## Bugs and Errors
 
-The submitted simulator has no bugs or errors. It has been tested on all of the six submitted RISCV programs and the output was compatible with Venus RISC-V simulator. However, there were some issues that iterated us while making the project. Including:
+The simulator has no bugs or errors. It has been tested on all of the six submitted RISCV programs and the output was compatible with Venus RISC-V simulator. However, there were some issues that iterated us while making the project. Including:
 1)	The pc counter was sometimes inaccurate, although it is computed in a loop that is controlled by the number of riscv instructions. it was exceeding the number of instructions, and it was making the number of instructions- which is the control variable – increase as well. The problem was solved with a break statement.
 2)	If there is no return address given in the simulated instructions. The program will output “unable to find address”
 
