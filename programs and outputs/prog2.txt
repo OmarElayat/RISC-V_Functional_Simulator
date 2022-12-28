@@ -1,0 +1,12 @@
+addi a0,zero,70
+addi a1,zero,28
+gcd:
+beq a0,a1,exit
+blt a1,a0,L1
+sub a1,a1,a0
+beq t0,t0,gcd
+L1:
+sub a0,a0,a1
+beq t0,t0,gcd
+exit:
+jalr zero,0(ra)

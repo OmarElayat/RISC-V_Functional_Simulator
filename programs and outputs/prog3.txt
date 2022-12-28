@@ -1,0 +1,17 @@
+addi a0,zero,70
+addi a1,zero,28
+gcd:
+addi sp,sp,-4
+sw ra,0(sp)
+beq a0,a1,exit1
+blt a1,a0,L1
+sub a1,a1,a0
+jal ra,gcd
+beq t0,t0,exit1
+L1:
+sub a0,a0,a1
+jal ra,gcd
+exit1:
+lw ra,0(sp)
+addi sp,sp,4
+jalr zero,0(ra)
